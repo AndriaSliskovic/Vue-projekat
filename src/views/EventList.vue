@@ -3,19 +3,22 @@
     <h1>Events Listing</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
     <Projekat1/> 
+    <Projekat2/>
   </div>
 </template>
 
 <script>
 import EventCard from '../components/EventCard.vue'
 import Projekat1 from '../views/Projekat1'
+import Projekat2 from '../views/Projekat2'
 // import axios from 'axios'
 import ApiService from '../services/ApiServices'
 
 export default {
   components: {
     EventCard,
-    Projekat1
+    Projekat1,
+    Projekat2
   },
   data(){
     return{

@@ -1,5 +1,5 @@
 {
-  "name": "projekat_3",
+  "name": "vue-projekat",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,8 +21,10 @@
     "@vue/cli-plugin-eslint": "^3.9.2",
     "@vue/cli-service": "^3.9.2",
     "@vue/eslint-config-prettier": "^3.0.5",
+    "css-loader": "^3.1.0",
+    "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
+    "stylus-loader": "^3.0.2",
     "vue-cli-plugin-vuetify": "^0.5.0",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.0.5"
