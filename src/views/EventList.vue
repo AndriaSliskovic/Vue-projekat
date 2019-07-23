@@ -1,21 +1,36 @@
 <template>
   <div>
     <h1>Events Listing</h1>
-    <EventCard />
-    <router-link :to="{ name: 'event-show', params: { id: '1' } }"
-      >Show Event #1</router-link
-    >
-    <projekat1/>
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <Projekat1/> 
   </div>
 </template>
 
 <script>
 import EventCard from '../components/EventCard.vue'
-import Projekat1 from '../views/Projekat1.vue'
+import Projekat1 from '../views/Projekat1'
+// import axios from 'axios'
+import ApiService from '../services/ApiServices'
+
 export default {
   components: {
     EventCard,
     Projekat1
+  },
+  data(){
+    return{
+      events:[]
+    }
+  },
+  created() {
+    ApiService.getEvents()
+    .then(response => {
+      this.events=response.data;
+      console.log(response.data)
+    })
+    .catch(error=>{
+      console.log('Greska pri prijemu podataka'+error.response)
+    })
   }
 }
 </script>

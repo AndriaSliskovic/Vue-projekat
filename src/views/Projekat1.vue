@@ -17,7 +17,7 @@ import Komponenta2 from '../components/Komponenta2'
 export default {
   components: {
     Komponenta1,
-    Komponenta2
+    Komponenta2,
   }
 }
 </script>

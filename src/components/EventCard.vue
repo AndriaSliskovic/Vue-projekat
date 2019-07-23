@@ -1,16 +1,22 @@
 <template>
-  <div>
-    <h4>{{ title }}</h4>
-  </div>
+  <router-link class="event-link" :to="{ name: 'event-show', params: { id: event.id } }">
+    <div class="event-card -shadow">
+      <h4 class="title">{{ event.title }}</h4>
+      <!-- <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon> -->
+    </div>
+  </router-link>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      title: 'Park Cleanup'
-    }
+  props:{
+    event:Object
+  },
+  created(){
+      console.log(this.event);
   }
+  
+  
 }
 </script>
 
