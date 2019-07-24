@@ -5,6 +5,7 @@ import EventList from './views/EventList.vue'
 import EventShow from './views/EventShow.vue'
 import Komponenta1 from './components/Komponenta1.vue'
 import Komponenta2 from './components/Komponenta2.vue'
+import Projekat2 from './views/Projekat2.vue'
 
 Vue.use(Router)
 
@@ -28,9 +29,9 @@ export default new Router({
       component: EventCreate
     },
     {
-      path: '/komponenta1',
-      name: 'komponenta1',
-      component: Komponenta1,
+      path: '/projekat2',
+      name: 'projekat2',
+      component: Projekat2,
       children: [
         {
           path: 'komponenta2',
